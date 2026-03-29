@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "SIMIL CAIXA - Importar Custos XLSX",
+  "version": "1.0.0",
+  "description": "Lê a planilha XLSX/XLS e preenche os custos das etapas no SIMIL.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://simil.caixa.gov.br/*",
+        "https://www.simil.caixa.gov.br/*"
+      ],
+      "js": ["xlsx.full.min.js", "content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
